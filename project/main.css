@@ -1,0 +1,103 @@
+/**********   welcome-section  ************/
+
+#product-overview {
+  height: calc(100vh - 45px);
+  width: 100%;
+  height: 528px;
+  background: url("./assets/freedom.jpg");
+  background-size: cover;
+  /* background-position: 0% 100%; */
+  background-position: center;
+  margin-top: 45px;
+  position: relative;
+}
+
+#product-overview h1 {
+  /* margin: 0; */
+  margin: 20px 10px;
+  color: white;
+  position: absolute;
+  bottom: 5%;
+}
+
+/********************************************************   PLANS SECTION   ***************************************************/
+.section-title {
+  text-align: center;
+}
+.plan {
+  background: #76a57e;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 20px;
+  padding: 16px;
+  vertical-align: middle;
+}
+
+.plan-highlighted {
+  background: #2a9b3d;
+  color: white;
+  box-shadow: 2px 2px 7px 4px rgba(0, 0, 0, 0.5);
+}
+
+.plan-annotation {
+  color: #76a57e;
+  background: white;
+  padding: 6px 0;
+  box-shadow: 1px 1px 4px 0.5px rgba(255, 255, 255, 0.5);
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.plan-features li {
+  margin: 8px 0px;
+}
+.plan-title {
+  color: rgb(133, 72, 19);
+}
+.plan-price {
+  color: rgb(42, 133, 19);
+}
+
+.plan-highlighted .plan-title,
+.plan-highlighted .plan-price {
+  color: white;
+}
+
+/* ****************************  KEY FEATURES  ********************* */
+
+#key-features {
+  background: rgb(204, 120, 105);
+  margin: 75px 0px 30px 0px;
+  padding: 15px;
+}
+
+.key-feature-lists {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.key-feature-list {
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+  vertical-align: top;
+}
+
+.key-feature-description {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.key-feature-image {
+  background: #ffcede;
+  width: 128px;
+  height: 128px;
+  margin: auto;
+  border: 1px solid gray;
+  border-radius: 50%;
+}

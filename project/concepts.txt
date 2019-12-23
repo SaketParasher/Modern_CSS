@@ -1,0 +1,49 @@
+/**************    SELECTORS SPECIFITY  **********/
+
+1) Inline styles 
+2) ID SELECTORS
+3) class, pseudo class selectors (:hover) amd attribute selectors
+4) tag selector, pseudo element(::befor) and * universal selector 
+
+
+/**************    COMBINATORS  **********/
+
+1) Adjacent Siblings :- sibling which is just after the element at sibling level.
+                        h2 + p {color:red} :- In this case all p elements which are just after the h2 element.ie. all p which
+                         are adjacent sibling of h2 will get red color.
+
+2) General Siblings :- Siblings which are at same level and also need not to be next sibling can be anywhere but should be at same level.
+                       h2 ~ p {color:red}. All p which are at same level of h2 gets red color.
+
+3) Direct Child     :- Any direct child will get the styles and not the nested childs to be noted only direct childs.
+                       div > p{color:red}. Any p which is direct child and not nested child will get color red.
+
+4) Descendant Child :- Any direct or nested child will get this style no matter where it is.
+                       h2 p :- Any p inside h2 either direct or nested child will get this style.
+
+/******************************************** ****    BOX -- SIZING     ****************************************/
+
+-->  By Default box-sizing property is set to content box which means that whatever height and width we will specify will be the height 
+     and width of content part only and then after that padding and border will be added so the total width or height of an element 
+     may be more than than the specified value.
+-->  Use box-sizing border box to avoid this. Border-box will include both margin and padding in total width and height specified and
+     will adjust the content part accordingly.
+
+
+/********************************************    POSITIONING     ****************************************/
+
+--> FIXED   :-  Postion Fixed will take the element out of normal document flow and the element will be positioned at its original place
+                only if top,left, bottom or right property is not applied. If these properties are applied then the element will be position
+                with respect to the HTML. i.e. the positioning content will be Viewport.
+
+--> Absolute:-  This property also takes the element out of the normal document flow.
+                If none of the ancestors i.e. parents have a position proerty applied then the positioning context of the element on which
+                Absolute position is applied will be the HTML.
+                If we have any parent with position property applied except static then the positioning context of that element will be the
+                closest parent on which position is applied.
+
+--> Relative :- Element is not taken out of normal document flow. Element remains in normal document flow. And the positioning content is the
+                element itself. i.e. the element will be positioned based on top or left or bottom or right values from its original position
+                itself not with respect to its parent or viewport.
+
+                

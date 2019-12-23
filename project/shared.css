@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+}
+
+/* ************************************    HEADER AND NAVIGATION     ************************* */
+
+/* main {
+  padding-top: 20px;
+} */
+
+.main-header {
+  background: #318181;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 8px 16px;
+  z-index: 1;
+}
+
+.main-header > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main_nav {
+  display: inline-block;
+  color: white;
+  width: calc(100% - 70px);
+  text-align: right;
+  vertical-align: middle;
+}
+.main_nav__items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main_nav__item {
+  display: inline-block;
+  margin: 5px 15px;
+}
+
+.main_nav__item a {
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+.main_nav__item a:hover,
+.main_nav__item a:active {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.brand {
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* **********************************   BUTTONS   ************************* */
+
+.button {
+  background: rgb(42, 133, 19);
+  color: white;
+  font: inherit;
+  border: 1.5px solid rgb(42, 133, 19);
+  padding: 9px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.button:hover {
+  background: white;
+  color: rgb(42, 133, 19);
+}
+.button:focus {
+  outline: none;
+}
+
+/* **********************************    FOOTER   ************************* */
+
+.main-footer {
+  background: black;
+  padding: 32px;
+  margin-top: 40px;
+}
+.main-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-footer-link {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.main-footer-link a {
+  color: white;
+  text-decoration: none;
+}
+.main-footer-link a:hover,
+.main-footer-link a:active {
+  color: gray;
+}
