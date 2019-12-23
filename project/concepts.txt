@@ -34,7 +34,9 @@
 
 --> FIXED   :-  Postion Fixed will take the element out of normal document flow and the element will be positioned at its original place
                 only if top,left, bottom or right property is not applied. If these properties are applied then the element will be position
-                with respect to the HTML. i.e. the positioning content will be Viewport.
+                with respect to the HTML. i.e. the positioning content will be Viewport. width in % will also be with respect to viewport.
+
+                The Containing element of Fixed element is viewport. So width in % will be calculated based on the width of viewport.
 
 --> Absolute:-  This property also takes the element out of the normal document flow.
                 If none of the ancestors i.e. parents have a position proerty applied then the positioning context of the element on which
@@ -42,8 +44,20 @@
                 If we have any parent with position property applied except static then the positioning context of that element will be the
                 closest parent on which position is applied.
 
+                The containing Block of an Absolute positioned element is the closest ancestor whose position is not static.
+                So, width calculation of an Absolute positioned element in % will be with respect to that ancestor and that 
+                also content + padding of ancestor will be the total width a/c to which width of Absolute positioned element
+                will be calculated.
+
 --> Relative :- Element is not taken out of normal document flow. Element remains in normal document flow. And the positioning content is the
                 element itself. i.e. the element will be positioned based on top or left or bottom or right values from its original position
                 itself not with respect to its parent or viewport.
 
-                
+                The containing block or parent of a Relative positioned element is any closest block level parent.
+                The lengths in % of Relative elements will be calculated bsed on the content of closest block level parent.
+
+/********************************************    IMAGES     ****************************************/
+
+--> Setting height and width on images in 100% will not respect or will not be according to height and width of its 
+    parent if the parent is an inline element. To Set the height and width of image in % an in accordance with parent 
+    we need to make parent element as inline-block.

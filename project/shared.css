@@ -11,6 +11,17 @@ h1 {
   font-family: "Lato", sans-serif;
 }
 
+.backdrop{
+  background: rgba(0, 0, 0,0.4);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+
 /* ************************************    HEADER AND NAVIGATION     ************************* */
 
 /* main {
@@ -23,7 +34,7 @@ h1 {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   z-index: 1;
 }
 
@@ -35,7 +46,7 @@ h1 {
 .main_nav {
   display: inline-block;
   color: white;
-  width: calc(100% - 70px);
+  width: calc(100% - 120px);
   text-align: right;
   vertical-align: middle;
 }
@@ -47,18 +58,57 @@ h1 {
 
 .main_nav__item {
   display: inline-block;
-  margin: 5px 15px;
+  margin: 0.3rem 0.9rem ;
 }
 
-.main_nav__item a {
+.main_nav__item a,.mobile_nav__item a {
   color: inherit;
   text-decoration: none;
-  padding-bottom: 4px;
+  padding-bottom: 0.25rem;
 }
+
+.main_nav__item--cta a,.mobile_nav__item--cta a{
+  padding: 8px;
+  background: tomato;
+  color: white;
+}
+
+
+
 .main_nav__item a:hover,
 .main_nav__item a:active {
   color: black;
   border-bottom: 2px solid black;
+}
+
+.main_nav__item--cta a:hover,.main_nav__item--cta a:active,.mobile_nav__item--cta a:hover,.mobile_nav__item--cta a:active{
+  color: tomato;
+  background: white;
+  border: none;
+}
+
+/* TOGGLE HAMBURGER BUTTON */
+
+.toggle-button{
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus{
+  outline: none;
+}
+
+.toggle-button__bar{
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
 }
 
 .brand {
@@ -66,7 +116,48 @@ h1 {
   text-decoration: none;
   font-size: 22px;
   font-weight: bold;
+  height:50px;
+  width: 55px;
+  display: inline-block;
+  vertical-align: middle;
 }
+/* As we made its parent a with class brand as inline-block then this image will follow the dimensions of its parent */
+.brand img{
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* ********************************  MOBILE NAV  ************************ */
+.mobile_nav{
+  display: none;
+  position: fixed;
+  z-index: 101;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 70%;
+  background: white;
+}
+
+.mobile_nav__items{
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile_nav__item{
+  margin: 1rem 0;
+}
+
+.mobile_nav__item a{
+  font-size: 1.5rem;
+}
+
 
 /* **********************************   BUTTONS   ************************* */
 
@@ -113,4 +204,8 @@ h1 {
 .main-footer-link a:hover,
 .main-footer-link a:active {
   color: gray;
+}
+
+.open{
+  display: block !important;
 }
