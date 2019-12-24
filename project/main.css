@@ -1,7 +1,7 @@
 /**********   welcome-section  ************/
 
 #product-overview {
-  height: calc(85vh - 45px);
+  height: calc(60vh - 45px);
   width: 100%;
   /* height: 528px; */
   /* height: calc(100vh - 45); */
@@ -21,6 +21,18 @@
   color: white;
   position: absolute;
   bottom: 5%;
+  font-size:1.5rem;
+}
+
+/* Min-width :- 640px*/
+@media (min-width:40rem){
+  #product-overview {
+    height: calc(88vh - 45px);
+    background-position: left 55% top 50% ;
+  }
+  #product-overview h1 {
+    font-size: 2rem;
+  }
 }
 
 /********************************************************   PLANS SECTION   ***************************************************/
@@ -29,18 +41,35 @@
 }
 .plan {
   background: #76a57e;
-  width: 30%;
-  display: inline-block;
+  width: 100%;
+  /* display: inline-block; */
   text-align: center;
-  margin: 10px 20px;
-  padding: 16px;
-  vertical-align: middle;
+  margin: 10px auto;
+  padding: 1%;
+  /* vertical-align: middle; */
 }
 
 .plan-highlighted {
   background: #2a9b3d;
   color: white;
-  box-shadow: 2px 2px 7px 4px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 2px 2px 7px 4px rgba(0, 0, 0, 0.5); */
+}
+
+@media (min-width:40rem){
+  .plan-list{
+    width: 100%;
+    text-align: center;
+  }
+  .plan{
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 13rem;
+    max-width: 25rem;
+  }
+  .plan-highlighted {
+     box-shadow: 2px 2px 7px 4px rgba(0, 0, 0, 0.5); 
+  }
 }
 
 .plan-annotation {

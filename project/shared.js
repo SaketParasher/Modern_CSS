@@ -19,7 +19,8 @@ function closeModal() {
     // backdrop.style.display = 'none';
     // modal.style.display = 'none';
     backdrop.classList.remove('open');
-    modal.classList.remove('open');
+    if (modal)
+        modal.classList.remove('open');
 }
 
 backdrop.addEventListener('click', function () {
@@ -29,7 +30,8 @@ backdrop.addEventListener('click', function () {
     }
     closeModal();
 });
-cancel.addEventListener('click', closeModal);
+if (cancel)
+    cancel.addEventListener('click', closeModal);
 
 hamburger.addEventListener('click', function () {
     // mobileNav.style.display = 'block';
